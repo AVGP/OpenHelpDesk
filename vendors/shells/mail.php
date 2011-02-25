@@ -19,7 +19,7 @@ class MailShell extends Shell
                         '{'.$mailAcc['host'].':'.$mailAcc['port'].'/imap/ssl/novalidate-cert}'.
                         $mailAcc['folder'].')');
             $mails = imap_search($imapConnection,'UNSEEN');
-            print_r($mails);
+
             foreach($mails as $m)
             {
                 $mailHead = imap_fetch_overview($imapConnection,$m);
@@ -40,7 +40,8 @@ class MailShell extends Shell
                     preg_match('@\[TICKET #(\d+)\]@i',$mailHead[0]->subject,$matches);
                     $ticketId = $matches[1];
                 }
-
+                
+                $this->Mail->create();
                 $data = array('Mail' => array(
                     'subject'        => $mailHead[0]->subject,
                     'sender'         => $mailHead[0]->from,
@@ -49,9 +50,10 @@ class MailShell extends Shell
                     'ticket_id'      => $ticketId,
                     'mailaccount_id' => $mailAcc['id']
                 ));
-                $this->Mail->save($data);
+                if(!$this->Mail->save($data)) echo 'WARNING: Could not process mail!';
             }
         }
+        echo 'Done.';
     }
 }
 ?> 
