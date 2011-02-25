@@ -1,4 +1,5 @@
 <?php
+App::import('Sanitize');
 class TicketsController extends AppController
 {
     public $paginate = array('limit' => 10);
