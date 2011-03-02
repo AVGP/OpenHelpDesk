@@ -1,0 +1,39 @@
+body
+{
+    margin:0px;
+    padding:0px;
+}
+
+#conversation
+{
+    padding:20px;
+}
+
+#navigation
+{
+    background-color:#cfc;
+    margin:0px;
+    height:25px;
+    font-size:1.1em;
+    padding:2px;
+    padding-right:4px;
+}
+
+#shorstats
+{
+    border:2px ridge #ccc;
+    margin-right:-4px;
+}
+
+.attentionwhore
+{
+    font-weight:bold;
+}
+
+.mailcontainer
+{
+    margin:5px 10px 5px 5px;
+    background-color:#fff;
+    border:#ccc 2px outset;
+    padding:2px;
+}
