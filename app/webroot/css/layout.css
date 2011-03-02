@@ -14,7 +14,7 @@ body
     background-color:#cfc;
     margin:0px;
     height:25px;
-    font-size:1.1em;
+    font-size:1.4em;
     padding:2px;
     padding-right:4px;
 }
@@ -28,6 +28,18 @@ body
 .attentionwhore
 {
     font-weight:bold;
+}
+
+.horizontal_linklist
+{
+    margin:0px;
+    padding:0px;
+}
+
+.horizontal_linklist li
+{
+    display:inline;
+    padding:5px;
 }
 
 .mailcontainer
