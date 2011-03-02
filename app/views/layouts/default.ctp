@@ -11,7 +11,16 @@
     <body>
         <div class="container">
             <div class="span-24 last" id="navigation">
-                <div class="span-20">Links</div>
+                <div class="span-20">
+                    <ul class="horizontal_linklist">
+                        <li><?php echo $html->link('Dashboard','/users/dashboard'); ?></li>
+                        <li><?php echo $html->link('My Tickets','/tickets/search/owner/me'); ?></li>
+                        <li><?php echo $html->link('Queues','/queues/'); ?></li>
+                        <li><?php echo $html->link('New Ticket','/tickets/add'); ?></li>
+                        <li><?php echo $html->link('Admin','/pages/admin'); ?></li>
+                        <li><?php echo $html->link('Logout','/users/logout'); ?></li>
+                    </ul>
+                </div>
                 <div class="span-4 last" id="shorstats">Statistics</div>
             </div>
             <div class="span-24 last">
