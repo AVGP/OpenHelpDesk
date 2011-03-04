@@ -21,7 +21,7 @@
                         <li><?php echo $html->link('Logout','/users/logout'); ?></li>
                     </ul>
                 </div>
-                <div class="span-4 last" id="shorstats">Statistics</div>
+                <div class="span-4 last" id="shortstats">Statistics</div>
             </div>
             <div class="span-24 last">
                 <?php echo $content_for_layout; ?>
