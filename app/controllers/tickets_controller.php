@@ -3,7 +3,7 @@ App::import('Sanitize');
 class TicketsController extends AppController
 {
     public $paginate = array('limit' => 10);
-    public $uses = array('Queue','User','Status');
+    public $uses = array('Ticket','Queue','User','Status');
 
     function index()
     {
