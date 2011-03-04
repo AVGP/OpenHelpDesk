@@ -32,5 +32,10 @@ class TicketsController extends AppController
             $this->set('queues',$this->Queue->find('list'));
         }
     }
+
+    function search($criteria,$value)
+    {
+        $this->set('tickets',$this->paginate('Ticket',array($criteria => $value)));
+    }
 }
 ?>
