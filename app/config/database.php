@@ -9,5 +9,14 @@ class DATABASE_CONFIG {
 		'password' => '',
 		'database' => 'openhelpdesk',
 	);
+
+    var $test = array(
+        'driver' => 'mysql',
+        'persistent' => false,
+        'host' => 'localhost',
+        'login' => 'root',
+        'password' => '',
+        'database' => 'openhelpdesk',
+    );
 }
 ?>
